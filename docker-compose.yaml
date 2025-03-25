@@ -1,0 +1,11 @@
+version: '3.8'
+
+name: 'lab-${STAGE}'
+
+services:
+  app:
+    image: iac/node-lab
+    ports:
+      - "${PORT}:3000"
+    environment:
+      - STAGE=${STAGE}
